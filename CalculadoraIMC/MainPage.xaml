@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraIMC.MainPage"
+             BackgroundColor="#ffcdb2">
+
+    <StackLayout>
+        <Frame BackgroundColor="#e29578"
+               Margin="30,45,30,10"
+               HeightRequest="40"
+               CornerRadius="20">
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="CALCULADORA IMC"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="White"/>
+            </StackLayout>
+        </Frame>
+
+        <Image Source="ImcImage.png"
+               HeightRequest="180"
+               Margin="0,15,0,0"/>
+        
+        <StackLayout>
+            <Label Text="Altura"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="45,30,0,0"
+                   TextColor="#d62828"/>
+            <Frame BackgroundColor="#F9EADA"
+               Margin="40,0,40,0"
+               HeightRequest="25"
+               CornerRadius="15">
+            <StackLayout>
+                    <Entry Placeholder="Ingrese su Altura en Mts"
+                           PlaceholderColor="#adb5bd"
+                           TextColor="#d62828"
+                           Keyboard="Numeric"
+                           FontSize="20"
+                           HorizontalTextAlignment="Center"
+                           x:Name="Altura"/>
+             </StackLayout>
+        </Frame>
+
+            <Label Text="Peso"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="45,5,0,0"
+                   TextColor="#d62828"/>
+            <Frame BackgroundColor="#F9EADA"
+               Margin="40,0,40,0"
+               HeightRequest="25"
+               CornerRadius="15">
+                <StackLayout>
+                    <Entry Placeholder="Ingrese su peso en Kg"
+                           PlaceholderColor="#adb5bd"
+                           TextColor="#d62828"
+                           Keyboard="Numeric"
+                           FontSize="20"
+                           HorizontalTextAlignment="Center"
+                           x:Name="Peso"/>
+                </StackLayout>
+            </Frame>
+
+            <Label Text="IMC"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Margin="45,5,0,0"
+                   TextColor="#d62828"/>
+            <Frame BackgroundColor="#F9EADA"
+               Margin="40,0,40,0"
+               HeightRequest="25"
+               CornerRadius="15">
+                <StackLayout>
+                    <Entry Placeholder="Su IMC es:"
+                           PlaceholderColor="#d62828"
+                           FontAttributes="Bold"
+                           TextColor="#d62828"
+                           FontSize="20"
+                           HorizontalTextAlignment="Center"
+                           x:Name="IMC"/>
+                </StackLayout>
+            </Frame>
+            <Button BackgroundColor="#e29578"
+                    Margin="70,20,70,0"
+                    HeightRequest="60"
+                    CornerRadius="15"
+                    Text="CALCULAR"
+                    FontSize="26"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    x:Name="btnCalcular"
+                    Clicked="btnCalcular_Clicked"/>
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>
